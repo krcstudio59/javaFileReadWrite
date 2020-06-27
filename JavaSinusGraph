@@ -1,0 +1,27 @@
+package soru2x;
+
+import java.applet.Applet;
+import java.awt.*;
+
+public class soru2x extends Applet {
+
+    public void init(){
+
+        this.setSize(1000,1000);
+
+    }
+
+    public void paint(Graphics g){
+        double ydegeri1;
+        double ydegeri2;
+        for(double x=0;x<=50.5;x+=0.5) {
+
+            ydegeri1 =  Math.sin(x);
+            ydegeri2 =Math.sin(x+1);
+            g.drawLine(10+(int)(20*x), 100-(int)(20*ydegeri1), 10+(int)(20*(x+1)), 100-(int)(20*ydegeri2));
+
+        }
+
+    }
+
+}
