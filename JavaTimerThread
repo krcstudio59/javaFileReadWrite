@@ -1,0 +1,41 @@
+package soru3x;
+
+public class soru3 extends Thread{
+
+public void run() {
+	String ad = "ismail";
+	String soyad = "kırcı";
+	int i = 0;
+	while(i<10) {
+		System.out.println(ad);
+
+		try 
+		{
+			sleep(1000); 
+		}
+		catch(InterruptedException e) 
+		{
+			
+		}
+		i++;}
+		i = 0;
+		while(i<20) 
+		{
+			System.out.println(soyad);
+			try 
+			{
+				sleep(1000);
+			}
+			catch(InterruptedException e) 
+			{
+				
+			}
+			i++;}}
+
+	public static void main(String[] args) {
+		soru3 a=new soru3();
+		a.start();
+		String ad = "ismail";
+        String soyad = "kırcı";
+	}
+}
