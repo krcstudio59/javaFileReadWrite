@@ -12,6 +12,7 @@ Kalıtımın ana kuralı olan bir sınıf sadece bir sınıfı miras alabilir ku
 
 SOYUT SINIF
 Ortak özellikleri olan nesneleri modellemek için Java dilinde kullanılan sınıftır. Soyut sınıfları oluşturmak için class ismi yerine “abstract class” kelimeleri kullanılır. Soyut sınıfı oluşturulan tasarımda benzer özellikleri olan sınıflar varsa kullanılabilir. Tekrar eden sınıflarda kod kalabalığı olmaması için soyut sınıf kullanımı daha kolaylık sağlamaktadır.
+
 INTERFACE
 Interface Java’da class ile benzer şekilde tanımlanır. Sadece class yerine interface yazılır. Class’tan farklı olarak statik değişkenleri bulunmaktadır. Java 〖çoklu mirası〗^((1)) desteklemez. Çoklu miras alabilmek için de interface çözümlerden biridir. 
 Interface; Constructor ve destructor kesinlikle barındırmaz. Arayüz içerisinde new() operatörü ile nensnne tanımlananmaz. Tanımlamanız durumunda “Cannot instantiate the type…” hatasıyla karşılaşırsınız. 
