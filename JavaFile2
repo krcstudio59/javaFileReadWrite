@@ -1,0 +1,46 @@
+package soru1x;
+
+import java.io.*;
+import java.util.Random;
+
+public class soru1x {
+	public static void main(String[] args) throws FileNotFoundException, IOException {
+        File file = new File("C:/final1/ali.txt");
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+        File file2 = new File("C:/final1/Harfler.txt");
+        if (!file2.exists()) {
+            file2.createNewFile();
+        }
+        File file3 = new File("C:/final1/Sayılar.txt");
+        if (!file3.exists()) {
+            file3.createNewFile();
+        }
+        PrintStream ali = new PrintStream(file);
+        Random r = new Random();
+		final int LIMIT = 10;
+                int [] Numbers=new int[10];
+                char [] Chars=new char [10];
+                for (int i = 0; i < LIMIT; i++) {
+			char c = (char) (r.nextInt(26) + 'a');
+			int num = r.nextInt();
+			ali.println(num);
+			ali.println(c);
+			Numbers[i] = num;
+			Chars[i] = c;
+		}
+		ali.close();
+          PrintStream Sayılar = new PrintStream(file3);
+          for (int i = 0; i < LIMIT; i++) {
+              Sayılar.println(Numbers[i]);
+          }
+          Sayılar.close();
+          PrintStream Harfler = new PrintStream(file2);
+          for (int i = 0; i < LIMIT; i++) {
+              Harfler.println(Chars[i]);
+          }
+          Harfler.close();
+    }
+
+}
